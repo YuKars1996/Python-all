@@ -1,6 +1,6 @@
-﻿let vopros = confirm('Будем открывать ссылки?'); #всплывающее окно, подтверждение действия
+﻿let question = confirm('Будем открывать ссылки?'); #всплывающее окно, подтверждение действия
 
-if (vopros == true){
+if (question == true){
 
 let cnt = 0;
     let link = document.getElementsByTagName('a'); #все ссылки на странице
