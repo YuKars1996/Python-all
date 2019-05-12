@@ -1,0 +1,36 @@
+﻿{
+  
+  "manifest_version": 2,
+  "name": "#имя расширения",
+  "version": "1.0",
+  
+  "icons": { #выбираем картинку расширения
+    "128": "iconfinder-sitecloning-4263532_117842.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [ 
+       "#расрешенный адрес для расширения",
+      ],
+      "js": ["background.js"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+       "#активные окна"
+  ],
+  "browser_action": {
+    "default_title": "#текст подсказки, при наведении на расширение",
+    "default_icon": "iconfinder-sitecloning-4263532_117842.png"
+  
+  },
+  "web_accessible_resources": [
+    "script.js"
+  ],
+ "background": {
+    "scripts": ["background.js"]
+  }
+    
+}
