@@ -1,0 +1,1 @@
+An extension for Google Chrome that allows you to open all the links on the page in new windows.
