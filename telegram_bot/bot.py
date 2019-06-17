@@ -5,7 +5,7 @@ updater = Updater(token='Токет от Telegram')
 dispatcher = updater.dispatcher
 
 def startCommand(bot, update):
-    bot.send_message(chat_id=update.message.chat_id, text='Эй, приветики! :)')
+    bot.send_message(chat_id=update.message.chat_id, text='#сообщение')
 
 def textMessage(bot, update):
     request = apiai.ApiAI('Токен от ИИ').text_request()
@@ -17,7 +17,7 @@ def textMessage(bot, update):
     if response:
         bot.send_message(chat_id=update.message.chat_id, text=response)
     else:
-        bot.send_message(chat_id=update.message.chat_id, text='Я тебя не понял...')
+        bot.send_message(chat_id=update.message.chat_id, text='#сообщение')
 
 start_command_handler = CommandHandler('start', startCommand)
 text_message_handler = MessageHandler(Filters.text, textMessage)
